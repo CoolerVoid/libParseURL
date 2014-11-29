@@ -2,6 +2,7 @@ libParseURL
 ===========
 
  Just another ultra fast URL extractor library in C
+ This version using DFA to make parse...
 
 ![Alt text](http://media.giphy.com/media/OvZewcVUv6Sha/giphy.gif)
 
