@@ -1,7 +1,7 @@
 libParseURL
 ===========
 
-# Just another URL extractor library in C
+ Just another URL extractor library in C
 
 ![Alt text](http://media.giphy.com/media/OvZewcVUv6Sha/giphy.gif)
 
