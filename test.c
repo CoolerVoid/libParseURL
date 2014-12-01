@@ -11,14 +11,19 @@
 
 int main() 
 {
-    char *p ="sdfsaaaaaaaaaa\n  sdfsdfsd<img src='senhor_madruga.png'>fsdfsdfsdf <a href='/page/site.jsp'> sdfsdfsdfsdfi    <ahref=\"blah.jsp\"> \n  <form action='majin_boo.php'>  sdf<a> <a href='boo.php'>\n sdhfh sdfhshdfhsf";
-    char *last = p;
+    char *p ="sdfsaaaa<img src = 'ratimbum.png' >  aaaaaa\n  sdfsdfsd<img src='senhor_madruga .png'>fsdfsdfsdf <a href='/page/site.jsp'> sdfsdfsdfsdfi    <ahref=\"blah.jsp\"> \n  <form action='majin_boo.php'>  sdf<a> <a href='boo.php'>\n sdhfh sdfhshdfhsf";
     int sz;
     int result=0;
 
     puts("Test to Parse");
     puts(p);
     puts("--------------- extract...");
+	
+
+    p=init_response_parse(p);
+
+    char *last = p;
+    puts(p);
 
     while(!result )
   	  switch (parse_urls(&p, &last)) 

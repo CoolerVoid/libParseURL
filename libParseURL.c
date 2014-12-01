@@ -17,6 +17,44 @@ enum {
 };
 */
 
+int char_type_counter(char *string,char type)
+{
+	int counter=0;
+ 
+	while(*string != '\0')
+	{
+		if(*string==type) 
+			counter++;
+		string++;
+	}
+  
+	return counter;
+}
+
+// to remove blank
+char *init_response_parse(char* input)                                                  
+{
+	int i=0,j=0,len=strlen(input),buf=len-char_type_counter(input,' ');
+	char *output=NULL;
+	output = malloc(buf*sizeof(char)+1);
+
+	while (i!=len)                       
+	{
+		if (input[i]!=' ')                                                  
+			output[j]=input[i];                                            
+		else
+			j--;   
+		i++;
+		j++;                                                      
+	}
+
+	output[j] ='\0';
+
+	free(output);
+
+	return output;                                                     
+}
+
 // My DFA URL Parser
 int parse_urls(char** p, char** lex)
 {
