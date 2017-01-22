@@ -50,8 +50,6 @@ char *init_response_parse(char* input)
 
 	output[j] ='\0';
 
-	free(output);
-
 	return output;                                                     
 }
 
