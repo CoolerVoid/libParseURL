@@ -23,6 +23,7 @@ int main()
     p=init_response_parse(p);
 
     char *last = p;
+    char *allocated = p;
     puts(p);
 
     while(!result )
@@ -49,6 +50,6 @@ int main()
 		    result=1;	
                     break;
 	  }
-
+    free(allocated);
     return 0;
 }
